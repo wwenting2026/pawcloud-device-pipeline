@@ -17,3 +17,9 @@
 ```bash
 python simulator.py   # 重新生成 data/devices.csv
 jupyter lab           # 打开数据自检 notebook
+
+## 数据库说明
+- 数据库：SQLite（data/device_data.db）
+- 表：device_data（device_id / pet_type / timestamp / food_intake / is_anomaly）
+- 复现顺序：python build_db.py → 用 queries.sql 验证
+- 预期结果：总条数 1200，异常 31 条
